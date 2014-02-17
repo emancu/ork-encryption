@@ -1,6 +1,5 @@
 require_relative 'helper'
 require 'mocha/api'
-# require 'json'
 
 include(Mocha::API)
 
@@ -20,7 +19,7 @@ config_hash = {
 Protest.describe 'Ork::Encryption' do
   context 'include Ork::Encryption' do
     test 'raise an error if it is not a Ork::Document' do
-      assert_raise Ork::Encryption::NotAnOrkDocument do
+      assert_raise Ork::NotOrkObject do
         class NotADocument
           include Ork::Encryption
         end
