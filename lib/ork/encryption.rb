@@ -3,7 +3,7 @@ require_relative 'serializers/json'
 
 module Ork
   module Encryption
-    VERSION = '0.0.1'
+    VERSION = '0.0.2'
 
     def self.included(klass)
       raise Ork::NotOrkObject unless klass.included_modules.include? Ork::Document

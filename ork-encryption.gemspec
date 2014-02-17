@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'ork-encryption'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = Time.now.strftime('%Y-%m-%d')
   s.summary     = 'Ruby modeling layer for Riak.'
   s.summary     = 'A simple encryption library for Ork::Documents stored in riak.'
