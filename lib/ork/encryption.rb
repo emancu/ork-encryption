@@ -1,5 +1,4 @@
 require_relative 'cipher'
-require_relative 'errors'
 require_relative 'serializers/json'
 
 module Ork
@@ -7,7 +6,7 @@ module Ork
     VERSION = '0.0.1'
 
     def self.included(klass)
-      raise NotAnOrkDocument unless klass.included_modules.include? Ork::Document
+      raise Ork::NotOrkObject unless klass.included_modules.include? Ork::Document
       klass.content_type Serializers::Json.content_type
     end
 
@@ -34,5 +33,7 @@ module Ork
       Ork::Encryption::Cipher.validate_config @encryption_config = config
     end
 
+    # Errors
+    class MissingConfig < StandardError; end
   end
 end

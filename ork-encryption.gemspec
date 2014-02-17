@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir['test/*.*']
 
   s.add_runtime_dependency 'riak-client', '~> 1.4'
-  s.add_runtime_dependency 'ork', '~> 0.1', '>= 0.1.3'
+  s.add_runtime_dependency 'ork', '~> 0.1', '>= 0.1.4'
   s.add_development_dependency 'protest', '~> 0'
   s.add_development_dependency 'mocha', '~> 0'
   s.add_development_dependency 'coveralls', '~> 0'
